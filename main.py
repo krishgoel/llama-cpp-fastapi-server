@@ -12,7 +12,7 @@ class Prompt(BaseModel):
     payload: str
 
 class ResponseGeneration:
-    def __init__(self, model_path: str = "./models/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf", n_gpu_layers: int = -1):
+    def __init__(self, model_path: str = "./models/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf", n_gpu_layers: int = -1): # Make n_gpy_layers = 0 for Mac
         self.model_path = model_path
         self.n_gpu_layers = n_gpu_layers
         self.llm = Llama(
