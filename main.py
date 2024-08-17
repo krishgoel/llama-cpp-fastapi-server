@@ -26,6 +26,7 @@ class ResponseGeneration:
         try:
             response = self.llm(prompt, max_tokens=max_tokens, stop=stop, echo=echo)
             logger.info("Response generated for prompt: %s", prompt)
+            logger.info("Response: %s", response)
             return response
         except Exception as e:
             logger.error("Error generating response: %s", e)
